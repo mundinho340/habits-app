@@ -4,7 +4,7 @@ const app = fastify()
 
 
 app.get('/', ()=>{
-   return "hello world"
+   return "home page"
 })
 
 
