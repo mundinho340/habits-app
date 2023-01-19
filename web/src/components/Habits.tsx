@@ -1,5 +1,9 @@
-export  function Habits(){
+interface HabitsProps{
+    completed: number
+}
+
+export  function Habits(props: HabitsProps){
     return(
-        <p>Kmk</p>
+        <div className="bg-zinc-900">{props.completed}</div>
     )
 }
