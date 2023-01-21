@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import {prisma} from "./lib/prisma"
+//import {prisma} from "./lib/prisma"
 import cors from "@fastify/cors"
 import { appRouts } from "./routs";
 
@@ -10,5 +10,5 @@ app.register(appRouts)
 app.listen({
    port:8081
 }).then(()=>{
-   console.log("server running!")
+   console.log("server running...!")
 })
