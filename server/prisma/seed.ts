@@ -16,7 +16,7 @@ async function run() {
   await prisma.day.deleteMany()
 
   /**
-   * Create habits
+   *   habits
    */
   await Promise.all([
     prisma.habit.create({
@@ -24,7 +24,7 @@ async function run() {
         id: firstHabitId,
         title: 'Beber 2L água',
         created_at: firstHabitCreationDate,
-        weekDays: {
+        WeekDays: {
           create: [
             { week_day: 1 },
             { week_day: 2 },
@@ -39,7 +39,7 @@ async function run() {
         id: secondHabitId,
         title: 'Exercitar',
         created_at: secondHabitCreationDate,
-        weekDays: {
+        WeekDays: {
           create: [
             { week_day: 3 },
             { week_day: 4 },
@@ -54,7 +54,7 @@ async function run() {
         id: thirdHabitId,
         title: 'Dormir 8h',
         created_at: thirdHabitCreationDate,
-        weekDays: {
+        WeekDays: {
           create: [
             { week_day: 1 },
             { week_day: 2 },
@@ -75,7 +75,7 @@ async function run() {
       data: {
         /** Monday */
         date: new Date('2023-01-02T03:00:00.000z'),
-        dayHabits: {
+        DayHabits: {
           create: {
             habit_id: firstHabitId,
           }
@@ -90,7 +90,7 @@ async function run() {
       data: {
         /** Friday */
         date: new Date('2023-01-06T03:00:00.000z'),
-        dayHabits: {
+        DayHabits: {
           create: {
             habit_id: firstHabitId,
           }
@@ -105,7 +105,7 @@ async function run() {
       data: {
         /** Wednesday */
         date: new Date('2023-01-04T03:00:00.000z'),
-        dayHabits: {
+        DayHabits: {
           create: [
             { habit_id: firstHabitId },
             { habit_id: secondHabitId },
