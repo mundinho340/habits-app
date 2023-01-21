@@ -33,10 +33,13 @@ export async function appRouts(app: FastifyInstance){
             date: z.coerce.date()
         })
     
-        const {date} =getDayParams.parse(request.query)
+        const {date} =getDayParams.parse (request.query)
+        const parsedDate =dayjs(date).startOf('day')
         const WeekDay = dayjs(date).get('day')
+
+        console.log(date, WeekDay)
     
-        const possibleHabit = await prisma.habit.findMany({
+        const possibleHabits = await prisma.habit.findMany({
             where:{
                 created_at:{
                     lte: date,
@@ -47,10 +50,26 @@ export async function appRouts(app: FastifyInstance){
                         
                     }
                 }
+            }
+        })
+
+        const day = await prisma.day.findUnique({
+            where:{
+                date: parsedDate.toDate(),
+
             },
+            include:{
+                  DayHabits:true,
+            }
+
+
+        })
+        const completedHabits = day?.DayHabits.map(DayHabit=>{
+            return DayHabit.habit_id
         })
         return{
-           possibleHabit 
+           possibleHabits,
+           completedHabits
         } 
      })
 
