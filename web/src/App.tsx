@@ -1,19 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import "./styles/global.css"
-import { Habits } from './components/Habits'
+//import { Habits } from './components/Habits'
+import logoImage from './assets/logo.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Habits completed={3}/>
-      <Habits completed={2}/>
-      <Habits completed={10}/>
-      <Habits completed={9}/>
-    </>
+    <div className='w-screnn h-screen flex justify-center items-center'>
+        <div className='w-full max-m-5xl px-6 flex flex-col gap-16'>
+          <div className='a-full max-w-3xl mx-auto flex items-center justify-between'>
+
+          </div>
+
+        </div>
+
+    </div>
       
   )
 }
