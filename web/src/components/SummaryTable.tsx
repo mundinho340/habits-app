@@ -1,3 +1,5 @@
+import { HabitsDay } from "./HabitsDay"
+
 const weekDays =[
     'D',
     'S',
@@ -14,13 +16,23 @@ export function SummaryTable(){
                 
                     {weekDays.map((weekDay,i )=> {
                         return(
-                            <div key={`${weekDay} +${i}`} className="text-zinc-400 text-xl h-10 w-10 font-bold flex items-center justify-center">
+                            <div key={`${weekDay} -${i}`} className="text-zinc-400 text-xl h-10 w-10 font-bold flex items-center justify-center">
                                 {weekDay}
                             </div>
                         )
 
                     })}
-                
+            </div>
+
+            <div className="grid grid-rows-7 grid-flow-col gap-3">
+                <HabitsDay/>
+                <HabitsDay/>
+                <HabitsDay/>
+                <HabitsDay/>
+                <HabitsDay/>
+                <HabitsDay/>
+                <HabitsDay/>
+
             </div>
         </div>
     )
