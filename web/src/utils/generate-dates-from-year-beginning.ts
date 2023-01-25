@@ -12,4 +12,6 @@ export function generateDatesFromYearBeginning(){
         dates.push(compareDate.toDate())
         compareDate = compareDate.add(1, 'day')
     }
+
+    return dates
 }
