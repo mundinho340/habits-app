@@ -72,7 +72,14 @@ export async function appRouts(app: FastifyInstance){
            completedHabits
         } 
      })
+     
 
+     //completed and uncompleted
+     //o id é o rout param é um parametro de identificação.
+
+     app.patch('/habits/:id/toggle', () =>{
+        
+     })
  }
 
 
