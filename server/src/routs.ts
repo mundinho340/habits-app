@@ -77,10 +77,12 @@ export async function appRouts(app: FastifyInstance){
      //completed and uncompleted
      //o id é o rout param é um parametro de identificação.
 
-     app.patch('/habits/:id/toggle', () =>{
+     app.patch('/habits/:id/toggle', (request) =>{
         const toggleHabitParms =z.object({
-            id: z.string().uuid()
+            id: z.string().uuid(),
         })
+
+        const { id } = toggleHabitParms.parse(request.params)
      })
  }
 
