@@ -93,11 +93,19 @@ export async function appRouts(app: FastifyInstance){
 
         if(!day){
             day = await prisma.day.create({
-                date:{
+                data:   {
                     date: today,
                 }
             })
         }
+
+        //completar os habitos
+        await prisma.dayHabit.create({
+            data:   {
+                day_id: day.id,
+                habit_id: id,
+            }
+        })
        
 
 
