@@ -108,16 +108,24 @@ export async function appRouts(app: FastifyInstance){
             }
         })
 
-        //completar os habitos
-        await prisma.dayHabit.create({
+        if(dayHabit){
+            await prisma.dayHabit.delete({
+                where:{
+                    id: dayHabit.id,
+                }
+            })
+        }
+        else{
+             //completar os habitos
+            await prisma.dayHabit.create({
             data:   {
                 day_id: day.id,
                 habit_id: id,
             }
         })
+        }
+
        
-
-
      })
  }
 
