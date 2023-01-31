@@ -99,6 +99,15 @@ export async function appRouts(app: FastifyInstance){
             })
         }
 
+        const dayHabit = await prisma.dayHabit.findUnique({
+            where: {
+                day_id_habit_id:{
+                    day_id: day.id,
+                    habit_id: id,
+                }
+            }
+        })
+
         //completar os habitos
         await prisma.dayHabit.create({
             data:   {
