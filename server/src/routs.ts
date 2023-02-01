@@ -78,11 +78,11 @@ export async function appRouts(app: FastifyInstance){
      //o id é o rout param é um parametro de identificação.
 
      app.patch('/habits/:id/toggle', async (request) =>{
-        const toggleHabitParms =z.object({
+        const toggleHabitParams =z.object({
             id: z.string().uuid(),
         })
 
-        const { id } = toggleHabitParms.parse(request.params)
+        const { id } = toggleHabitParams.parse(request.params)
 
         const today = dayjs().startOf('day').toDate()
         let day= await prisma.day.findUnique({
@@ -124,8 +124,6 @@ export async function appRouts(app: FastifyInstance){
             }
         })
         }
-
-       
      })
 
      app.get('/summary', async ()=>{
