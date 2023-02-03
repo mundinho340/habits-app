@@ -1,0 +1,15 @@
+existem 2 formas de programar:
+
+1* forma imperativa;
+2* forma declarativa;
+
+
+Forma imperativa -> E uma forma de programar
+onde indicamos ao sistema exatamente cada passo que 
+ele deve executar para chegar ao resltado que a gente espera.
+
+No react programamos de forma declarativa
+Maneira declarativa funciona da seguinte forma:
+criamos uma condição e a gente reage a esta condição
+
+ex : o modal esta aberto true or false.
