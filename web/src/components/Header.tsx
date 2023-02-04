@@ -18,9 +18,10 @@ export function Header(){
               Novo Habito
             </Dialog.Trigger>
             <Dialog.Portal>
-              <Dialog.Overlay className='w-screen h-screen bg-black/88 fixed insert-0'>
+              <Dialog.Overlay className='w-screen h-screen bg-black/80 fixed insert-0'/> 
+              <Dialog.Content>
                 Conteudo do modal
-              </Dialog.Overlay>
+              </Dialog.Content>
               
             </Dialog.Portal>
           </Dialog.Root>
