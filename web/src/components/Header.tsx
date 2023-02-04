@@ -19,9 +19,9 @@ export function Header(){
             </Dialog.Trigger>
             <Dialog.Portal>
               <Dialog.Overlay className='w-screen h-screen bg-black/80 fixed insert-0'/> 
-              <Dialog.Content>
+              <Dialog.Content className='absolute p-10 bg-zinc-900 rounded-3xl w-full max-w-md top-1/2'>
                 Conteudo do modal
-              </Dialog.Content>
+              </Dialog.Content >
               
             </Dialog.Portal>
           </Dialog.Root>
