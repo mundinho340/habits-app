@@ -1,5 +1,6 @@
 import {Plus} from 'phosphor-react'
 import * as Dialog from '@radix-ui/react-dialog'
+import {X} from 'phosphor-react'
 //import { Habits } from './components/Habits'
 import logoImage from '../assets/logo.svg' 
 import { useState } from 'react'
@@ -19,7 +20,10 @@ export function Header(){
             </Dialog.Trigger>
             <Dialog.Portal>
               <Dialog.Overlay className='w-screen h-screen bg-black/80 fixed insert-0'/> 
-              <Dialog.Content className='absolute p-10 bg-zinc-900 rounded-3xl w-full max-w-md top-1/2'>
+              <Dialog.Content className='absolute p-10 bg-zinc-900 rounded-3xl w-full max-w-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                <Dialog.Close  className='absolute  right-6 top-6 text-zinc-400 hover:text-zinc-200' >
+                  <X size={24} aria-label="fechar"/>
+                </Dialog.Close>
                 Conteudo do modal
               </Dialog.Content >
               
