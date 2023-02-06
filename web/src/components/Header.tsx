@@ -4,6 +4,7 @@ import {X} from 'phosphor-react'
 //import { Habits } from './components/Habits'
 import logoImage from '../assets/logo.svg' 
 import { useState } from 'react'
+import { NewHabitForm } from './newHabitForm'
 
 export function Header(){
     return(
@@ -24,9 +25,10 @@ export function Header(){
                 <Dialog.Close  className='absolute  right-6 top-6 text-zinc-400 hover:text-zinc-200' >
                   <X size={24} aria-label="fechar"/>
                 </Dialog.Close>
-                <Dialog.Title>
+                <Dialog.Title className='text-3xl loading-light font-extrabold'>
                     Criar habito
                 </Dialog.Title>
+                <NewHabitForm/> 
               </Dialog.Content >
               
             </Dialog.Portal>
