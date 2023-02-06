@@ -11,13 +11,16 @@ export function NewHabitForm(){
             id="title"
             placeholder="ex.: Exercicios, dormir be,, etc..."
             autoFocus
+            className="p-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400"
             />
 
-            <label htmlFor="">
+            <label htmlFor=""  className="font-semibold loading-tight mt-4">
                 Qual a recorrencia?
             </label>
 
-            <button type="submit">
+            <button type="submit"
+            className="mt-6 rounded-lg p-4 flex items-center justify-center gap-3 font-semibold bg-green-400  "
+            >
                 <Check size={20} weight="bold"/>
                 Confirmar
             </button>
