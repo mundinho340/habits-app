@@ -24,7 +24,9 @@ export function Header(){
                 <Dialog.Close  className='absolute  right-6 top-6 text-zinc-400 hover:text-zinc-200' >
                   <X size={24} aria-label="fechar"/>
                 </Dialog.Close>
-                Conteudo do modal
+                <Dialog.Title>
+                    Criar habito
+                </Dialog.Title>
               </Dialog.Content >
               
             </Dialog.Portal>

@@ -1,3 +1,7 @@
 export function NewHabitForm(){
-    
+    return(
+        <>
+            
+        </>
+    )
 }
