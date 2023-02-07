@@ -10,7 +10,7 @@ export  function HabitsDay(){
         <Popover.Trigger className='w-10 h-10 bg-zinc-900 border-zinc-800 rounded-lg'/>
         <Popover.Portal>
             <Popover.Content>
-                
+                ola guys
             </Popover.Content>
         </Popover.Portal>
        </Popover.Root>
