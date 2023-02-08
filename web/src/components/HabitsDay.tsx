@@ -14,7 +14,7 @@ export  function HabitsDay(){
                 <span className='font-semibold text-zinc-400'>terça-feira</span>
                 <span className='at-1 font-extrabold leading-light text-3xl'>07/02</span>
                 <div className='h-3 rounded-xl bg-zinc-700 w-full mt-4'>
-                    <ProgressBar/>
+                    <ProgressBar progress={30}/>
                 </div>
                 <Popover.Arrow height={8} width={16} className='fill-zinc-900'/>
             </Popover.Content>
