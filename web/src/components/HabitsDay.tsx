@@ -1,14 +1,19 @@
 import * as Popover from '@radix-ui/react-popover'
 import { ProgressBar } from './ProgressBar'
+import clsx from 'clsx'
 
-// interface HabitsProps{
-//     completed: number
-// }
+interface HabitsProps{
+     completed: number
+        amount: number
+    }
 
-export  function HabitsDay(){
+export  function HabitsDay({completed, amount}: HabitsProps){
+    const completedPercentage = Math.round((completed/ amount)*100)
     return(
        <Popover.Root>
-        <Popover.Trigger className='w-10 h-10 bg-zinc-900 border-zinc-800 rounded-lg'/>
+        <Popover.Trigger className={clsx('w-10 h-10 bg-zinc-900 border-zinc-800 rounded-lg',{
+            'bg-violet-500 border-violet-400': completedPercentage>=80
+        })}/>
         <Popover.Portal>
             <Popover.Content className='min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col'>
                 <span className='font-semibold text-zinc-400'>terça-feira</span>
