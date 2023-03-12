@@ -1,4 +1,5 @@
 import { Check } from "phosphor-react";
+import { useState } from "react";
 import *as  CheckBox from '@radix-ui/react-checkbox'
 import { FormEvent } from "react";
 
@@ -12,6 +13,7 @@ const dayWeeks =[
     'Sabado'
 ]
 export function NewHabitForm(){
+    const [title, setTitle]=useState('')
     function createNewHabit(event: FormEvent){
         event.preventDefault()
     }
@@ -26,6 +28,7 @@ export function NewHabitForm(){
             placeholder="ex.: Exercicios, dormir be,, etc..."
             autoFocus
             className="p-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400"
+            onChange={event =>setTitle(event.target.value)}
             
             />
 
