@@ -26,22 +26,45 @@ export  function HabitsDay({completed, amount}: HabitsProps){
             <Popover.Content className='min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col'>
                 <span className='font-semibold text-zinc-400'>terça-feira</span>
                 <span className='at-1 font-extrabold leading-light text-3xl'>07/02</span>
-                <div className='h-3 rounded-xl bg-zinc-700 w-full mt-4'>
+                {/* <div className='h-3 rounded-xl bg-zinc-700 w-full mt-4'> */}
                     <ProgressBar progress={completedPercentage}/>
                     <div className='mt-6 flex flex-col gap-3'>
                         <CheckBox.Root
-                            className='flex-items-center gap-3'
+                            className='flex items-center gap-3 group'
                         >
-                            <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800'>
+                            <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500'>
                                 <CheckBox.Indicator>
                                     <Check size={20}  className="text-white"/>
                                 </CheckBox.Indicator>
                             </div>
-                            <span className='font-semibold text-white leading-tight'>
+                            <span className='font-semibold text-white leading-tight group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
                                 Beber 2L de água
                             </span>
                         </CheckBox.Root>
-                    </div>
+                            <CheckBox.Root
+                            className='flex items-center gap-3 group'
+                        >
+                            <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500'>
+                                <CheckBox.Indicator>
+                                    <Check size={20}  className="text-white"/>
+                                </CheckBox.Indicator>
+                            </div>
+                            <span className='font-semibold text-white leading-tight group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
+                                Beber 2L de água
+                            </span>
+                        </CheckBox.Root>
+                            <CheckBox.Root
+                            className='flex items-center gap-3 group'
+                        >
+                            <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500'>
+                                <CheckBox.Indicator>
+                                    <Check size={20}  className="text-white"/>
+                                </CheckBox.Indicator>
+                            </div>
+                            <span className='font-semibold text-white leading-tight group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400'>
+                                Beber 2L de água
+                            </span>
+                        </CheckBox.Root>
                 </div>
                 <Popover.Arrow height={8} width={16} className='fill-zinc-900'/>
             </Popover.Content>
