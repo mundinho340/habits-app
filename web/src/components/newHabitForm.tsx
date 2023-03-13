@@ -19,7 +19,7 @@ export function NewHabitForm(){
     const [weekDays, setWeekDays] = useState<number[]>([])
     // console.log('executou!')
     useEffect(()=>{
-        api.get('day').then(response=>{
+        api.get('summary').then(response=>{
             console.log(response.data)
         })
 
