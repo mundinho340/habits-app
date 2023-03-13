@@ -14,8 +14,12 @@ const dayWeeks =[
 ]
 export function NewHabitForm(){
     const [title, setTitle]=useState('')
+
+    const [weekDays, setWeekDays] = useState()
+
     function createNewHabit(event: FormEvent){
         event.preventDefault()
+        console.log(title)
     }
     return(
         <form onSubmit={createNewHabit} className="w-full flex flex-col mt-6">
@@ -40,6 +44,9 @@ export function NewHabitForm(){
                 <div className="flex flex-col gap-2 mt-3" key={days}>
                         <CheckBox.Root
                         className='flex items-center gap-3 group'
+                        onCheckedChange={()=>{
+                            console.log('selecionou o dia '+index)
+                        }}
                     >
                         <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500'>
                             <CheckBox.Indicator>
