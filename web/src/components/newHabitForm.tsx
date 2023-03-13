@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import *as  CheckBox from '@radix-ui/react-checkbox'
 import { FormEvent } from "react";
 
-import {api} from '../../../server/src/lib/axios'
+import {api} from  '../../lib/axios'
 const dayWeeks =[
     'Domingo',
     'Segunda-feira',
@@ -19,7 +19,9 @@ export function NewHabitForm(){
     const [weekDays, setWeekDays] = useState<number[]>([])
     // console.log('executou!')
     useEffect(()=>{
-        api.get('')
+        api.get('day').then(response=>{
+            console.log(response.data)
+        })
 
     },[])
     function createNewHabit(event: FormEvent){
