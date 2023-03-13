@@ -17,6 +17,7 @@ const amountOfDaysTofill = minimumSummaryDatesSize - summaryDates.length
 
 
 export function SummaryTable(){
+    // api.get('')
     return(
         <div className="m-full flex">
             <div className="grid grid-rows-7 grid-flow gap-3">
