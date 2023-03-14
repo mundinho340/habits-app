@@ -5,12 +5,13 @@ import *as  CheckBox from '@radix-ui/react-checkbox'
 import { Check } from 'phosphor-react'
 
 interface HabitsProps{
-     completed: number
-        amount: number
+    date:Date
+     completed?: number
+        amount?: number
     }
 
-export  function HabitsDay({completed, amount}: HabitsProps){
-    const completedPercentage = Math.round((completed/ amount)*100)
+export  function HabitsDay({completed=0, amount=0}: HabitsProps){
+    const completedPercentage = amount >0 ? Math.round((completed/ amount)*100):0
     return(
        <Popover.Root>
         <Popover.Trigger className={clsx('w-10 h-10 bg-zinc-900 border-zinc-800 rounded-lg',{
