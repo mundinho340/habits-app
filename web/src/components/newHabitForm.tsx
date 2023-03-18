@@ -29,12 +29,13 @@ export function NewHabitForm(){
             return
         }
 
-        await api.post('habits',{
+        await api.post('habits', {
             title,
             weekDays
         })
 
         alert('habito criado com sucesso')
+        console.log('ola')
     }
 
     function handleToggleWeekDay(weekDay: number){
@@ -87,7 +88,7 @@ export function NewHabitForm(){
             ))}
           
 
-            <button type="submit"
+            <button  type="submit"
             className="mt-6 rounded-lg p-4 flex items-center justify-center gap-3 font-semibold bg-green-400 hover:bg-green-500"
             >
                 <Check size={20} weight="bold"/>
