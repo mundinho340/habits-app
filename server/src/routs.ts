@@ -5,6 +5,7 @@ import dayjs from 'dayjs'
 
 export async function appRouts(app: FastifyInstance){
       app.post('/habits', async (request)=>{
+        console.log('ola bro')
       const createHabitBody = z.object({
             title: z.string(),
             WeekDays: z.array(
