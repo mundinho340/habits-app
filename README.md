@@ -1,4 +1,4 @@
-# habits-app, habbits-web
+# habits-app-mobile, habbits-web
 ## Olá aqui temos um projecto web e mobile de gestão de tarefas.
 ## Este é um aplicativo de marcação de habitos, ele ajuda na gestão de tarefas.
 ### O apricativo representa os dias do ano em forma de quadrado, todos os dias do ano são ilustrados, e seleciona com background violeta os dias em que foram concluídas as actividades e a quantidade de actividades que foram concluidas naquele dia, assim tendo diferentes tipos de opacidade de violeta nos quadrados.
@@ -20,6 +20,8 @@
 ## Criar um novo habito.
 ![image](https://github.com/mundinho340/habits-app/assets/72931424/1c355a29-e5de-44b7-9842-40f68a90424e)
 
+## Techs usadas 
+### Reactjs/React Native/ Tailwind /TypeScript/
 # Raimundo João Chigarisso Chitava 
 
 
