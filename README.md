@@ -20,6 +20,8 @@
 ## Criar um novo habito.
 ![image](https://github.com/mundinho340/habits-app/assets/72931424/1c355a29-e5de-44b7-9842-40f68a90424e)
 
+#Raimundo João Chigarisso Chitava 
+
 
 
 
